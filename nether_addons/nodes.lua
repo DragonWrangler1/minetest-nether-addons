@@ -1,5 +1,5 @@
 minetest.register_node(":nether:rack_with_dragonscale_fragments", {
-	description = ("Nether Rack with dragonscale fragments"),
+	description = S("Nether Rack with dragonscale fragments"),
 	tiles = {"dragonscale_infused_nether_rack.png"},
 	groups = {cracky=3},
 	drop = "nether:unrefined_dragonscale_fragment",
@@ -7,7 +7,7 @@ minetest.register_node(":nether:rack_with_dragonscale_fragments", {
 })
 if minetest.get_modpath("nether_mobs") then
 minetest.register_node(":nether:dragon", {
-	description = ("Nether Dragon"),
+	description = S("Nether Dragon"),
 	drawtype = "mesh",
 	paramtype2 = "facedir",
 	mesh = "mobs_nether_dragon.b3d",
@@ -17,7 +17,7 @@ minetest.register_node(":nether:dragon", {
 })
 
 minetest.register_node(":nether:man", {
-	description = ("Nether Man"),
+	description = S("Nether Man"),
 	drawtype = "mesh",
 	paramtype2 = "facedir",
 	mesh = "mobs_netherman.b3d",
@@ -47,7 +47,7 @@ minetest.register_node(":nether:man", {
 end
 
 minetest.register_node(":nether:rack_deep_with_dragonscale_fragments", {
-	description = ("Deep Nether Rack with dragonscale fragments"),
+	description = S("Deep Nether Rack with dragonscale fragments"),
 	tiles = {"dragonscale_infused_deep_nether_rack.png"},
 	groups = {cracky=3},
 	drop = "nether:unrefined_dragonscale_fragment",
@@ -55,7 +55,7 @@ minetest.register_node(":nether:rack_deep_with_dragonscale_fragments", {
 })
 
 minetest.register_node(":nether:basalt_with_dragonscale_fragments", {
-	description = ("Nether basalt with dragonscale fragments"),
+	description = S("Nether basalt with dragonscale fragments"),
 	tiles = {"dragonscale_infused_nether_basalt.png",
 	         "dragonscale_infused_nether_basalt.png",
 	        "nether_basalt_with_dragonscale_side.png",
@@ -70,17 +70,17 @@ minetest.register_node(":nether:basalt_with_dragonscale_fragments", {
 
 
 minetest.register_craftitem(":nether:dragonscale_fragment", {
-	description = ("Dragonscale Fragment"),
+	description = S("Dragonscale Fragment"),
 	inventory_image = "dragonscale_fragment.png",
 })
 
 minetest.register_craftitem(":nether:unrefined_dragonscale_fragment", {
-	description = (" Unrefined Dragonscale Fragment"),
+	description = S(" Unrefined Dragonscale Fragment"),
 	inventory_image = "dragonscale_fragment_unrefined.png",
 })
 
 minetest.register_node(":nether:nether_block", {
-	description = ("Nether Block"),
+	description = S("Nether Block"),
 	tiles = {"nether_nether_block.png"},
 	is_ground_content = false,
 	groups = {cracky = 1},
@@ -88,7 +88,7 @@ minetest.register_node(":nether:nether_block", {
 })
 
 minetest.register_node(":nether:nether_block_carved", {
-	description = ("Carved Nether Block"),
+	description = S("Carved Nether Block"),
 	tiles = {"nether_nether_block_carved.png"},
 	groups = {cracky=2},
 	paramtype = "light",
@@ -97,7 +97,7 @@ minetest.register_node(":nether:nether_block_carved", {
 })
 
 minetest.register_node(":nether:hewn_basalt_brick", {
-	description = ("Hewn Nether Basalt Brick"),
+	description = S("Hewn Nether Basalt Brick"),
 	tiles = {
 		"hewn_nether_basalt_brick.png"
 	},
