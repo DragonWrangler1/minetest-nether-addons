@@ -1,6 +1,6 @@
 if  minetest.get_modpath("nether_sword_api") then
 minetest.register_tool(":nether:sword_dragon_scale", {
-	description = "Dragon Scale Sword",
+	description = S("Dragon Scale Sword"),
 	inventory_image = "dragon_scale_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.3,
@@ -20,7 +20,7 @@ minetest.register_tool(":nether:sword_dragon_scale", {
 else
 
 minetest.register_tool(":nether:sword_dragon_scale", {
-	description = "Dragon Scale Sword",
+	description = S("Dragon Scale Sword"),
 	inventory_image = "dragon_scale_sword.png",
 	tool_capabilities = {
 		full_punch_interval = 0.3,
@@ -38,7 +38,7 @@ minetest.register_tool(":nether:sword_dragon_scale", {
 end
 
 minetest.register_tool(":nether:dragon_scale_pick", {
-	description = ("Dragon Scale Pickaxe"),
+	description = S("Dragon Scale Pickaxe"),
 	inventory_image = "dragon_scale_pickaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.8,
@@ -53,7 +53,7 @@ minetest.register_tool(":nether:dragon_scale_pick", {
 })
 
 minetest.register_tool(":nether:dragon_scale_shovel", {
-	description = ("Dragon Scale Shovel"),
+	description = S("Dragon Scale Shovel"),
 	inventory_image = "dragon_scale_shovel.png",
 	tool_capabilities = {
 		full_punch_interval = 0.9,
@@ -68,7 +68,7 @@ minetest.register_tool(":nether:dragon_scale_shovel", {
 })
 
 minetest.register_tool(":nether:dragon_scale_axe", {
-	description = ("Dragon Scale Axe"),
+	description = S("Dragon Scale Axe"),
 	inventory_image = "dragon_scale_axe.png",
 	tool_capabilities = {
 		full_punch_interval = 0.8,
