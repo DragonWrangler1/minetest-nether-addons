@@ -1,0 +1,216 @@
+local S = minetest.get_translator(minetest.get_current_modname())
+
+minetest.register_node(":nether:aurelium_water_source", {
+	description = S("Aurelium Water Source"),
+	drawtype = "liquid",
+	waving = 3,
+	alpha = 150,
+	tiles = {
+		{
+			name = "default_water_source_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+		{
+			name = "default_water_source_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	color = '#00007c',
+	walkable = false,
+	light_source = 10,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "source",
+	liquid_alternative_flowing = "nether:aurelium_water_flowing",
+	liquid_alternative_source = "nether:aurelium_water_source",
+	liquid_viscosity = 6,
+	liquid_renewable = false,
+	post_effect_color = {a = 150, r = 35, g = 20, b = 200},
+	groups = {--[[water = 3, ]]liquid = 3},
+	sounds = default.node_sound_water_defaults(),
+})
+
+minetest.register_node(":nether:aurelium_water_flowing", {
+	description = S("Flowing Aurelium Water"),
+	drawtype = "flowingliquid",
+	waving = 3,
+	alpha = 150,
+	tiles = {"default_water.png"},
+	special_tiles = {
+		{
+			name = "default_water_flowing_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+		{
+			name = "default_water_flowing_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	color = '#00007c',
+	light_source = 10,
+	paramtype2 = "flowingliquid",
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "flowing",
+	liquid_alternative_flowing = "nether:aurelium_water_flowing",
+	liquid_alternative_source = "nether:aurelium_water_source",
+	liquid_viscosity = 5,
+	liquid_renewable = false,
+	post_effect_color = {a = 150, r = 15, g = 20, b = 80},
+	groups = {--[[water = 3, ]]liquid = 3, not_in_creative_inventory = 1},
+	sounds = default.node_sound_water_defaults(),
+})
+
+bucket.register_liquid(
+	"nether:aurelium_water_source",
+	"nether:aurelium_water_flowing",
+	"nether_addons:bucket_aurelium_water",
+	"bucket_aurelium_water.png",
+	S("Aurelium Water Bucket"),
+	{tool = 1, water_bucket = 1}
+)
+
+
+minetest.register_node(":nether:hot_water_source", {
+	description = S("Hot Water Source"),
+	drawtype = "liquid",
+	waving = 3,
+	alpha = 150,
+	tiles = {
+		{
+			name = "default_river_water_source_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+		{
+			name = "default_river_water_source_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 2.0,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	color = '#71ffb9',
+	walkable = false,
+	pointable = false,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "source",
+	damage_per_second = 3,
+	liquid_alternative_flowing = "nether:hot_water_flowing",
+	liquid_alternative_source = "nether:hot_water_source",
+	liquid_viscosity = 6,
+	liquid_renewable = false,
+	post_effect_color = {a = 150, r = 44, g = 100, b = 72},
+	groups = {--[[water = 3, ]]liquid = 3},
+	sounds = default.node_sound_water_defaults(),
+})
+
+minetest.register_node(":nether:hot_water_flowing", {
+	description = S("Hot Flowing Water"),
+	drawtype = "flowingliquid",
+	waving = 3,
+	alpha = 150,
+	tiles = {"default_water.png"},
+	special_tiles = {
+		{
+			name = "default_river_water_flowing_animated.png",
+			backface_culling = false,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+		{
+			name = "default_river_water_flowing_animated.png",
+			backface_culling = true,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 0.5,
+			},
+		},
+	},
+	use_texture_alpha = "blend",
+	paramtype = "light",
+	color = '#71ffb9',
+	paramtype2 = "flowingliquid",
+	walkable = false,
+	pointable = false,
+	damage_per_second = 3,
+	diggable = false,
+	buildable_to = true,
+	is_ground_content = false,
+	drop = "",
+	drowning = 1,
+	liquidtype = "flowing",
+	liquid_alternative_flowing = "nether:hot_water_flowing",
+	liquid_alternative_source = "nether:hot_water_source",
+	liquid_viscosity = 5,
+	liquid_renewable = false,
+	post_effect_color = {a = 150, r = 44, g = 100, b = 72},
+	groups = {--[[water = 3, ]]liquid = 3, not_in_creative_inventory = 1},
+	sounds = default.node_sound_water_defaults(),
+})
+
+bucket.register_liquid(
+	"nether:hot_water_source",
+	"nether:hot_water_flowing",
+	"nether_addons:bucket_hot_water",
+	"bucket_hot_water.png",
+	S("Hot Water Bucket"),
+	{tool = 1, water_bucket = 1}
+)

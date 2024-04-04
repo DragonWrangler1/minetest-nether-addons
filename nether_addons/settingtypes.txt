@@ -1,0 +1,11 @@
+# Adds Lava cooling: Do not enable if the lava_cooling_reverse_effect setting is enabled
+nether_lava_crust_cooling (Cools Lava) bool true
+# Adds the particle spawner for lava crust
+nether_lava_particle_spawner (Adds particle spawner) bool true
+# reverses the effect of the lava_crust_cooling setting
+nether_lava_cooling_reverse_effect (Reverses cooling effect) bool false
+# enables/disables the alternate aurelium armor
+nether_aurelium_armor_alt (Set to true to enable the alt armor) bool false
+#Controls Nether man spawning on beacons
+nether_man_beacon_spawning_max (High) int -5000 -30927 30912
+nether_man_beacon_spawning_min (Low) int -30927 -30927 30912
