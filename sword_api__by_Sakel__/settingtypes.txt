@@ -1,0 +1,2 @@
+# Adds the dragon scale sword function
+dragon_scale_sword (Include Sword Engraved Recipe) bool true
