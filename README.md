@@ -1,3 +1,6 @@
+## Downloads
+[![ContentDB](https://content.minetest.net/packages/DragonWrangler/tkr_nether_public/shields/downloads/)](https://content.minetest.net/packages/DragonWrangler/tkr_nether_public/)
+
 ## INTRODUCTION
 
 - This README.md file is here to help you understand a bit more about the mod. I have added a few new features, and I feel I need to explain them.
