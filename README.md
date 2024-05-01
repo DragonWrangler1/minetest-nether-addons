@@ -105,3 +105,9 @@
 
 - I started with the Volcanic update but I ran out of ideas, and I felt that there wasn't enough changes for a full version update, so I stopped work on that and started working with
 - Aurelium. It is wip, and changes to aurelium should be expected ( major changes ) but that is for a later update.
+
+  ### Contributing ###
+
+  Want to contribute ?
+
+  Feel free to make a pr
