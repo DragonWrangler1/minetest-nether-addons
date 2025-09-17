@@ -210,7 +210,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	label = "Aurelium Water and Lava Conversion",
-	nodenames = {"default:water_source", "nether:big_aurelium_crystal", "nether:med_aurelium_crystal", "nether:small_aurelium_crystal"},
+	nodenames = {"nether:big_aurelium_crystal", "nether:med_aurelium_crystal", "nether:small_aurelium_crystal"},
 	neighbors = {"default:lava_flowing",},
 	interval = 2,
 	chance = 1,
@@ -223,36 +223,6 @@ minetest.register_abm({
 		local posBelow = {x = pos.x, y = pos.y - 1, z = pos.z}
 		if minetest.get_node(posAbove).name == "default:lava_flowing" and minetest.get_node(posBelow).name == "air" then
 			minetest.set_node(posBelow, {name = "default:water_source"})
-			minetest.get_node_timer(posAbove):set(math.random(7, 15) / 10, 0)
-		
-		
-			--[[ commented out because the flame sound plays for too long
-			if minetest.global_exists("fire") and fire.update_player_sound ~= nil then
-				-- The fire mod only updates its sound every 3 seconds, these flames will be
-				-- out by then, so start the sound immediately
-				local players = minetest.get_connected_players()
-				for n = 1, #players do fire.update_player_sound(players[n]) end
-			end]]
-		--end
-	end
-end
-})
-
-minetest.register_abm({
-	label = "Aurelium Water and Lava Conversion",
-	nodenames = {"default:water_source", "nether:big_aurelium_crystal", "air", "nether:med_aurelium_crystal", "nether:small_aurelium_crystal"},
-	neighbors = {"default:lava_flowing", "air"},
-	interval = 2,
-	chance = 2,
-	catch_up = false,
-	action = function (pos, node)
-	
-	--if math.random(1, 3) == 1 and minetest.registered_nodes["nether:big_aurelium_crystal"] ~= nil then
-		-- occasionally brief flames will be seen when breaking lava crust
-		local posAbove = {x = pos.x, y = pos.y + 1, z = pos.z}
-		local posBelow = {x = pos.x, y = pos.y - 1, z = pos.z}
-		if minetest.get_node(posAbove).name == "air" and minetest.get_node(posBelow).name == "default:water_source" then
-			minetest.set_node(posBelow, {name = "air"})
 			minetest.get_node_timer(posAbove):set(math.random(7, 15) / 10, 0)
 		
 		
