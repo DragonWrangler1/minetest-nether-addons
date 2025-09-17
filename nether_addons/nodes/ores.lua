@@ -31,7 +31,7 @@ minetest.register_node(":nether:basalt_with_dragonscale_fragments", {
 })
 
 minetest.register_ore({
-			ore_type = "cluster",
+			ore_type = "scatter",
 			ore = "nether:rack_with_dragonscale_fragments",
 			wherein = spawn_within,
 			clust_scarcity = 50*50*50,
@@ -41,7 +41,7 @@ minetest.register_ore({
 		})
 		
 		minetest.register_ore({
-			ore_type = "cluster",
+			ore_type = "scatter",
 			ore = "nether:rack_deep_with_dragonscale_fragments",
 			wherein = spawn_within,
 			clust_scarcity = 50*50*50,
@@ -51,7 +51,7 @@ minetest.register_ore({
 		})
 
 		minetest.register_ore({
-			ore_type = "cluster",
+			ore_type = "scatter",
 			ore = "nether:basalt_with_dragonscale_fragments",
 			wherein = spawn_within,
 			clust_scarcity = 50*50*50,
