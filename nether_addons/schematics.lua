@@ -150,8 +150,8 @@ minetest.register_decoration({
 	
 if minetest.get_modpath("nether_mobs") and minetest.get_modpath("beacons") then
 
-local MIN = tonumber(minetest.settings:get("nether_man_beacon_spawning_min"))
-local MAX = tonumber(minetest.settings:get("nether_man_beacon_spawning_max"))
+local MIN = minetest.settings:get("nether_man_beacon_spawning_min")
+local MAX = minetest.settings:get("nether_man_beacon_spawning_max")
 	
 mobs:spawn({
 	name = "nether_mobs:netherman",
