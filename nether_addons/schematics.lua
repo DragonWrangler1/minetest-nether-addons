@@ -150,16 +150,13 @@ minetest.register_decoration({
 	
 if minetest.get_modpath("nether_mobs") and minetest.get_modpath("beacons") then
 
-local MIN = minetest.settings:get("nether_man_beacon_spawning_min")
-local MAX = minetest.settings:get("nether_man_beacon_spawning_max")
-	
 mobs:spawn({
 	name = "nether_mobs:netherman",
 	nodes = {"beacons:base_magenta"},
 	min_light = 0,
 	max_light = 15,
-	max_height = MAX,
-	min_height = MIN,
+	max_height = nether.DEPTH_CEILING,
+	min_height = nether.DEPTH_FLOOR,
 	interval = 1,
 	chance = 1,
 	day_toggle = nil,
